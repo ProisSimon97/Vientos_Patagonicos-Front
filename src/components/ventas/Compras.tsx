@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import {
     Table,
     Thead,
@@ -10,7 +10,7 @@ import {
     TableContainer,
     Box
   } from '@chakra-ui/react'
-import { Compra } from '../../domain/Compra';
+import { Compra } from '../../domain/Compra';   
 
 export default function Compras() {
     const [compras, setCompras] = useState<Compra[]>([]);
