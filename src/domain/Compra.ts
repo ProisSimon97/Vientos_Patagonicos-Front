@@ -4,3 +4,7 @@ export interface Compra {
     montoTotal: number,
     numeroUnico: string
 }
+ 
+export interface Id {
+    
+}
