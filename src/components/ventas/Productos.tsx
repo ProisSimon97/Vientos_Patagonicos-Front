@@ -12,8 +12,8 @@ import {
   Box,
   Checkbox
 } from '@chakra-ui/react'
+import { EditIcon } from '@chakra-ui/icons'
 import { Link } from "react-router-dom";
-
 
 type ProductoPropType = {
   selectedProductos: number[];
@@ -79,7 +79,9 @@ export default function Productos({
                     <Td>{producto.precio || '-'}</Td>
                     <Td>{producto.marca}</Td>
                     <Td>
-                      <Link to={'/modificar-producto'}>*</Link>
+                      <Link to={`/modificar-producto/${producto.id}`}>
+                        <EditIcon/>
+                      </Link>
                     </Td>
                     <Td>
                       <Checkbox colorScheme='green'

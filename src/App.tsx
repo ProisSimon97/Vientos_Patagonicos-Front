@@ -4,6 +4,7 @@ import NotFound from "./pages/NotFound";
 import NavBar from './components/common/NavBar';
 import MisCompras from "./pages/MisCompras";
 import Comprar from "./pages/Comprar";
+import ModificarProductosPage from "./pages/ModificarProductosPage";
 
 export default function App() {
   return (
@@ -12,8 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/comprar" element={<Comprar/>} />
-        <Route path="/productos" element={<h1>Holaaaa</h1>}/>
-        <Route path="/modificar-producto" element={<h1>Holaaaaaaa</h1>} />
+        <Route path="/modificar-producto/:id" element={<ModificarProductosPage/>} />
         <Route path="/mis-compras" element={<MisCompras/>} />
         <Route path="*" element={<NotFound/>} />
       </Routes>

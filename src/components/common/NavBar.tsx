@@ -17,6 +17,7 @@ import {
   import { MoonIcon, SunIcon } from '@chakra-ui/icons'
   import { NavLink } from "react-router-dom";
   import './navbar.css'
+  import { useId } from 'react';
 
   const Links = [
         {   
@@ -26,10 +27,6 @@ import {
         {   
             to: '/comprar',
             name: "Comprar"
-        },
-        {   
-            to: 'productos',
-            name: "Lista Productos"
         },
         {   
             to: '/mis-compras',
@@ -47,7 +44,7 @@ import {
             <Box>Logo</Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink className={({ isActive }) => isActive ? 'active' : ''} to={link.to}>{link.name}</NavLink>
+                <NavLink key={useId()} className={({ isActive }) => isActive ? 'active' : ''} to={link.to}>{link.name}</NavLink>
               ))}
             </HStack>
   
